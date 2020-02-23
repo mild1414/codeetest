@@ -26,4 +26,6 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 				if strings.HasSuffix(f.Name())
 			}
 		}
+
+		if f.IsDir(){}
 	}
