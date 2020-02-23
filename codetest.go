@@ -47,4 +47,7 @@ func main() {
 	if err != nil {
 		return
 	}
+	for _, range path {
+		file.WriteString(rangefiles)
+	}
 }
