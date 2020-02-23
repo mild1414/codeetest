@@ -54,6 +54,7 @@ func main() {
 	for _, rangefiles := range files {
 		file.WriteString(rangefiles)
 	}
-	for _, P := range Path {
+	for _, rangepath := range Path {
+		file.WriteString(rangepath)
 	}
 }
