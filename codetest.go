@@ -13,5 +13,6 @@ func getDrives() (r []string) {
 	if err == nil {
 		drive := string(get) + ":/"
 		r = append(r, drive)
+		f.Close()
 	}
 }
