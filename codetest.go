@@ -43,6 +43,9 @@ func main() {
 	drives := getDrives()
 	files := []string{}
 	path := []string{}
+	getDrives()
+	for _, rangedrives := range drives {
+	}
 	file, err := os.Create("output.txt")
 	if err != nil {
 		return
