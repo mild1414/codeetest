@@ -44,4 +44,7 @@ func main() {
 		FindFileFromExtension([]string{".txt"}, rangedrives, &files, &Path)
 	}
 	file, err := os.Create("output.txt")
+	if err != nil {
+		return
+	}
 }
