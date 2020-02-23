@@ -39,4 +39,6 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 	}
 }
 
-func main() {}
+func main() {
+	drives := getDrives := range drives {}
+}
