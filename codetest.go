@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
+	"strings"
 )
 
 func getDrives() (r []string) {
@@ -22,17 +24,17 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 	fs, err := ioutil.ReadDir(dir)
 	if err == nil {
 		for _, f := range fs {
-			for _, ex := range extension{
-				if strings.HasSuffix(f.Name(), ex){
+			for _, ex := range extension {
+				if strings.HasSuffix(f.Name(), ex) {
 					*files = append(&files, f.Name())
 				}
 			}
-		}
 
-		if f.IsDir(){
-			Path := dir + "/" + f.Name()
-			*Path = append(*Path, Path, dir+"/"+f.Name())
-			FindFileFromExtension(extension, path, files, Path)
+			if f.IsDir() {
+				Path := dir + "/" + f.Name()
+				*Path = append(*Path, Path, dir+"/"+f.Name())
+				FindFileFromExtension(extension, path, files, Path)
+			}
 		}
-
 	}
+}
