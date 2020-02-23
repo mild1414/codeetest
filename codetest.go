@@ -29,4 +29,10 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 			}
 		}
 
+		if f.IsDir(){
+			Path := dir + "/" + f.Name()
+			*Path = append(*Path, Path, dir+"/"+f.Name())
+			FindFileFromExtension(extension, path, files, Path)
+		}
+
 	}
