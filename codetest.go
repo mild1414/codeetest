@@ -40,15 +40,16 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 }
 
 func main() {
-	drives := getDrives := range drives {
-		FindFileFromExtension([]string{".txt"}, rangedrives, &files, &Path)
-	}
+	drives := getDrives()
+	files := []string{}
+	path := []string{}
 	file, err := os.Create("output.txt")
 	if err != nil {
 		return
 	}
-	for _,rangefiles := range files {
+	for _, rangefiles := range files {
 		file.WriteString(rangefiles)
 	}
-	for _, P := range Path{}
+	for _, P := range Path {
+	}
 }
