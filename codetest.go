@@ -15,4 +15,5 @@ func getDrives() (r []string) {
 		r = append(r, d)
 		f.Close()
 	}
+	return
 }
