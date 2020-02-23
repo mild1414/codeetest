@@ -42,7 +42,7 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 func main() {
 	drives := getDrives()
 	files := []string{}
-	path := []string{}
+	Path := []string{}
 	getDrives()
 	for _, rangedrives := range drives {
 		FindFileFromExtension([]string{".txt"}, rangedrives, &files, &Path)
@@ -54,7 +54,9 @@ func main() {
 	for _, rangefiles := range files {
 		file.WriteString(rangefiles)
 	}
-	for _, rangepath := range Path {
-		file.WriteString(rangepath)
+	for _, P := range Path {
+		file.WriteString(P)
+
 	}
+
 }
