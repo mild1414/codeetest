@@ -23,9 +23,10 @@ func FindFileFromExtension(extension []string, dir string, files *[]string, Path
 	if err == nil {
 		for _, f := range fs {
 			for _, ex := range extension{
-				if strings.HasSuffix(f.Name())
+				if strings.HasSuffix(f.Name(), ex){
+					*files = append(&files, f.Name())
+				}
 			}
 		}
 
-		if f.IsDir(){}
 	}
